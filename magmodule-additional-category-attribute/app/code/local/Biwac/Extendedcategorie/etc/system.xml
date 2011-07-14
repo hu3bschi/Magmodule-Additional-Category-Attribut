@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <tabs>
+        <biwac module="extendedcategorie" translate="label">
+            <label>Biwac Extended Categories</label>
+            <sort_order>999</sort_order>
+        </biwac>
+    </tabs>
+    <sections>
+        <extendedcategoriesection module="extendedcategorie" translate="label">
+            <label>General Configurations</label>
+<!--            <tab>biwac</tab> -->
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <examplegroup translate="label">
+                    <label>Configurations</label>
+                    <frontend_type>text</frontend_type>
+                    <!--<comment><![CDATA[<div style="border: 1px solid #e1e1e1; padding: 2px 10px;"><b>HTML Example Text</b><br /><ul><li><em>example 1<em></li><li><em>example 2<em></li></ul></div>]]></comment>-->
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>
+                        <example translate="label">
+                            <label>Example Field</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </example>
+                    </fields>
+                </examplegroup>
+            </groups>
+        </extendedcategoriesection>
+    </sections>
+</config>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Biwac_Extendedcategorie>
+            <version>0.1.0</version>
+        </Biwac_Extendedcategorie>
+    </modules>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <extendedcategoriesection translate="title" module="extendedcategorie">
+                                            <title>Biwac Extended Categories</title>
+                                            <sort_order>50</sort_order>
+                                        </extendedcategoriesection>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <global>
+        <helpers>
+            <extendedcategorie>
+                <class>Biwac_Extendedcategorie_Helper</class>
+            </extendedcategorie>
+        </helpers>
+        <resources>
+            <intrum_setup>
+                <setup>
+                    <module>Biwac_Intrum</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </intrum_setup>
+            <intrum_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </intrum_read>
+        </resources>
+        
+        <resources>
+            <extendedcategorie_setup>
+                <setup>
+                    <module>Biwac_Extendedcategorie</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </extendedcategorie_setup>
+
+            <extendedcategorie_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </extendedcategorie_write>
+
+            <extendedcategorie_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </extendedcategorie_read>
+        </resources>
+    </global>
+</config>
